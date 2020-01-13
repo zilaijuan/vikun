@@ -1,0 +1,64 @@
+/**index.wxss**/
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.weather {
+  padding: 100rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+
+}
+.image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.today .image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.today{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.today .icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.temperature{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.item-center{
+  align-self: center;
+}

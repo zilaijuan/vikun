@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container">
+  <view style="margin:0rpx 80rpx;align-self:center">
+    {{context.ciba}}
+    <view style="margin-top:10rpx">{{context['ciba-en']}}</view>
+  </view>
+  <view class="today" bindtap="bindTodayTap">
+    <view class="icon">
+      <view wx:if="{{today.cond_code}}">
+        <image src='../../res/{{today.cond_code}}.png' class="image"></image>
+
+      </view>
+
+      <view style="temperature">
+        <view style="font-size:100rpx">{{today.tmp}}°</view>
+        <view>{{today.cond_txt}}</view>
+
+      </view>
+    </view>
+    <view>体感温度：{{today.fl}}°</view>
+    <view>湿度：{{today.hum}}% {{today.wind_dir}}{{today.wind_sc}}级</view>
+  </view>
+  <view class="weather">
+    <view wx:for="{{daily_forecast}}">
+      <view class="items">
+        <view class="item-center" wx:if="{{index == 0}}"> 今天 </view>
+        <view class="item-center" wx:elif="{{index == 1}}"> 明天 </view>
+        <view class="item-center"  wx:else> 后天 </view>
+        <view class="item-center" wx:if="{{item.cond_code_d}}">
+          <image src='../../res/{{item.cond_code_d}}.png' class="image"></image>
+        </view>
+        <view class="item-center">{{item.cond_txt_d}}转{{item.cond_txt_n}}</view>
+        <view class="item-center">{{item.tmp_min}}°~{{item.tmp_max}}°</view>
+      </view>
+    </view>
+  </view>
+</view>
